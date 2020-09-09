@@ -1,11 +1,30 @@
-const name = "«Генератор защитного поля»"; // Write code on this line
-let price = 1000; // Write code on this line
-const firstMessage = `Выбран ${name}, цена за штуку ${price} кредитов`; // Write code on this line
-price = 2000;
-const secondMessage = `Выбран ${name}, цена за штуку ${price} кредитов`;
-// Write code on this line
-console.log(firstMessage);
-// 'Выбран «Генератор защитного поля», цена за штуку 1000 кредитов'
+let message = '';
+const user = {
+  age: 20,
+  hobby: 'html',
+  name: 'Mango',
+  premium: true,
+};
 
-console.log(secondMessage);
-// 'Выбран «Генератор защитного поля», цена за штуку 2000 кредитов'
+//Write code under this line
+user.mood = 'happy';
+user['full time'] = true;
+user.hobby = 'skydiving';
+user.premium = false;
+
+const keys = Object.keys(user);
+// Write code under this line
+
+for (const key of keys) {
+  message += `${key} : ${user[key]}\n`;
+}
+
+console.log(message);
+/*
+'age : 20 
+hobby : skydiving 
+name : Mango 
+premium : false 
+mood : happy 
+"full time" : true 
+' */
